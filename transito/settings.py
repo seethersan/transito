@@ -75,17 +75,31 @@ WSGI_APPLICATION = "transito.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+USE_POSTGRES = os.environ.get("USE_POSTGRES", False) == "True"
+POSTGRES_DATABASE_NAME = os.environ.get("POSTGRES_DATABASE_NAME", "db")
+POSTGRES_USERNAME = os.environ.get("POSTGRES_USERNAME", "postgres")
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", "postgres")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "127.0.0.1")
+POSTGRES_PORT = os.environ.get("POSTGRES_PORT", "5432")
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "usersDB",
-        "USER": "postgres",
-        "PASSWORD": "pa$$postgres",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+if USE_POSTGRES:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": POSTGRES_DATABASE_NAME,
+            "USER": POSTGRES_USERNAME,
+            "PASSWORD": POSTGRES_PASSWORD,
+            "HOST": POSTGRES_HOST,
+            "PORT": POSTGRES_PORT,
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 
 # Password validation
