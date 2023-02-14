@@ -27,7 +27,6 @@ class VehiculoSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         try:
-            breakpoint()
             propietario = Persona.objects.get(
                 email=validated_data["propietario"]["email"]
             )
