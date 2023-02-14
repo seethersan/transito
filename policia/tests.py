@@ -23,7 +23,7 @@ class VehiculoViewSetTestCase(TestCase):
         }
         self.vehiculo = Vehiculo.objects.create(**self.vehiculo_data)
 
-    def test_list_vehicles_by_owner(self):
+    def test_list_vehicles_empty(self):
         url = "/api/infracciones/?email=test@example.com"
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
