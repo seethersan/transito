@@ -17,18 +17,21 @@ This API was built with python3.10, Django 4.15 and Postgres 14.1
 ## VirtualEnv
 
 Use a virtualenv to run the app
-´´´bash
+
+```bash
 virtualenv .env
 pip install -r requirements.txt
 python manage.py runserver
-´´´
+```
 
 ## Docker Compose
 
 Use docker-compose to run the app
-´´´bash
+
+```bash
 docker-compose up -d
-´´´
+```
+
 It will build the image and run it using docker-compose
 The app can be accessed using por 8000
 
@@ -37,24 +40,26 @@ The app can be accessed using por 8000
 ## Virtualenv
 
 If you are running the project with virtualenv you need to execute the following command
-´´´bash
+
+```bash
 python manage.py createsuperuser
-´´´
+```
 
 ## Docker Compose
 
 First you need to open a shell inside the app's container
-´´´bash
+
+```bash
 docker ps
 docker exec -it [CONTAINER-ID] /bin/bash
 python manage.py createsuperuser
-´´´
+```
 
 # Run tests
 
-´´´bash
+```bash
 python manage.py test
-´´´
+```
 
 # Proposed AWS Arquitecture
 
