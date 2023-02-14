@@ -1,0 +1,848 @@
+{
+	"info": {
+		"_postman_id": "58afed4d-e535-4fbf-8893-092823f9fe84",
+		"name": "transito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7274366"
+	},
+	"item": [
+		{
+			"name": "persona",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/personas/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/personas/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"personas",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 17:35:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"email\": \"andresvega@hotmail.com\",\n        \"first_name\": \"Andres\",\n        \"last_name\": \"Vega\"\n    },\n    {\n        \"email\": \"carlos_jcez@hotmail.com\",\n        \"first_name\": \"Juan\",\n        \"last_name\": \"Espinoza\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Juan\",\n    \"last_name\": \"Espinoza\",\n    \"email\": \"carlos_jcez@hotmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/personas/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Andres\",\n    \"last_name\": \"Vega\",\n    \"email\": \"andresvega@hotmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/personas/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"personas",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 16:44:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"andresvega@hotmail.com\",\n    \"first_name\": \"Andres\",\n    \"last_name\": \"Vega\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehiculo",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/vehiculos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"vehiculos",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/vehiculos/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"vehiculos",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 17:35:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"placa\": \"AWS123\",\n        \"marca\": \"BMW\",\n        \"modelo\": \"i120\",\n        \"color\": \"rojo\",\n        \"tipo\": \"auto\",\n        \"propietario\": \"andresvega@hotmail.com\"\n    },\n    {\n        \"placa\": \"BYI092\",\n        \"marca\": \"BMW\",\n        \"modelo\": \"i218\",\n        \"color\": \"plateado\",\n        \"tipo\": \"auto\",\n        \"propietario\": \"carlos_jcez@hotmail.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"placa\": \"BYI092\",\n    \"marca\": \"BMW\",\n    \"modelo\": \"i218\",\n    \"color\": \"plateado\",\n    \"tipo\": \"auto\",\n    \"propietario\": \"carlos_jcez@hotmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/vehiculos/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"vehiculos",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 17:30:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "121"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"placa\": \"BYI092\",\n    \"marca\": \"BMW\",\n    \"modelo\": \"i218\",\n    \"color\": \"plateado\",\n    \"tipo\": \"auto\",\n    \"propietario\": \"carlos_jcez@hotmail.com\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "infracciones",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placa_patente\": \"BYI092\",\n    \"timestamp\": \"2023-02-14T12:12:00.000\",\n    \"comentarios\": \"vehiculo mal estacionado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/infracciones/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"infracciones",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"placa_patente\": \"BYI092\",\n    \"timestamp\": \"2023-02-14T14:12:00.000\",\n    \"lugar\": \"Lima\",\n    \"comentarios\": \"paso luz roja\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/infracciones/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"infracciones",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 18:17:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"vehiculo\": {\n        \"placa\": \"BYI092\",\n        \"marca\": \"BMW\",\n        \"modelo\": \"i218\",\n        \"color\": \"plateado\",\n        \"tipo\": \"auto\",\n        \"propietario\": \"carlos_jcez@hotmail.com\"\n    },\n    \"timestamp\": \"2023-02-14T14:12:00Z\",\n    \"lugar\": \"Lima\",\n    \"comentarios\": \"paso luz roja\",\n    \"policia\": \"Alvaro Dias\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/infracciones/?email=carlos_jcez@hotmail.com",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"infracciones",
+										""
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "carlos_jcez@hotmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 14 Feb 2023 18:11:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1279"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vehiculo\": {\n            \"placa\": \"BYI092\",\n            \"marca\": \"BMW\",\n            \"modelo\": \"i218\",\n            \"color\": \"plateado\",\n            \"tipo\": \"auto\",\n            \"propietario\": \"carlos_jcez@hotmail.com\"\n        },\n        \"timestamp\": \"2023-02-14T17:44:10.772476Z\",\n        \"lugar\": \"Lima\",\n        \"comentarios\": \"vehiculo mal estacionado\",\n        \"policia\": \"Alvaro Dias\"\n    },\n    {\n        \"vehiculo\": {\n            \"placa\": \"BYI092\",\n            \"marca\": \"BMW\",\n            \"modelo\": \"i218\",\n            \"color\": \"plateado\",\n            \"tipo\": \"auto\",\n            \"propietario\": \"carlos_jcez@hotmail.com\"\n        },\n        \"timestamp\": \"2023-02-14T18:03:13.592677Z\",\n        \"lugar\": \"Lima\",\n        \"comentarios\": \"vehiculo mal estacionado\",\n        \"policia\": \"Alvaro Dias\"\n    },\n    {\n        \"vehiculo\": {\n            \"placa\": \"BYI092\",\n            \"marca\": \"BMW\",\n            \"modelo\": \"i218\",\n            \"color\": \"plateado\",\n            \"tipo\": \"auto\",\n            \"propietario\": \"carlos_jcez@hotmail.com\"\n        },\n        \"timestamp\": \"2023-02-14T18:07:39.208439Z\",\n        \"lugar\": \"Lima\",\n        \"comentarios\": \"vehiculo mal estacionado\",\n        \"policia\": \"Alvaro Dias\"\n    },\n    {\n        \"vehiculo\": {\n            \"placa\": \"BYI092\",\n            \"marca\": \"BMW\",\n            \"modelo\": \"i218\",\n            \"color\": \"plateado\",\n            \"tipo\": \"auto\",\n            \"propietario\": \"carlos_jcez@hotmail.com\"\n        },\n        \"timestamp\": \"2023-02-14T18:09:17.366868Z\",\n        \"lugar\": \"Lima\",\n        \"comentarios\": \"vehiculo mal estacionado\",\n        \"policia\": \"Alvaro Dias\"\n    },\n    {\n        \"vehiculo\": {\n            \"placa\": \"BYI092\",\n            \"marca\": \"BMW\",\n            \"modelo\": \"i218\",\n            \"color\": \"plateado\",\n            \"tipo\": \"auto\",\n            \"propietario\": \"carlos_jcez@hotmail.com\"\n        },\n        \"timestamp\": \"2023-02-14T12:12:00Z\",\n        \"lugar\": \"Lima\",\n        \"comentarios\": \"vehiculo mal estacionado\",\n        \"policia\": \"Alvaro Dias\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"policia3\",\n    \"email\": \"alvarodias@policia.com\",\n    \"first_name\": \"Alvaro\",\n    \"last_name\": \"Dias\",\n    \"nui\": \"1234567892\",\n    \"password\": \"Ju-12+An-34\",\n    \"password2\": \"Ju-12+An-34\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/register/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"policia3\",\n    \"email\": \"alvarodias@policia.com\",\n    \"first_name\": \"Alvaro\",\n    \"last_name\": \"Dias\",\n    \"nui\": \"1234567892\",\n    \"password\": \"Ju-12+An-34\",\n    \"password2\": \"Ju-12+An-34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 16:34:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"policia3\",\n    \"email\": \"alvarodias@policia.com\",\n    \"first_name\": \"Alvaro\",\n    \"last_name\": \"Dias\",\n    \"nui\": \"1234567892\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"pm.collectionVariables.set('token', res.access);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"policia3\",\n    \"password\": \"Ju-12+An-34\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/token/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"policia3\",\n    \"password\": \"Ju-12+An-34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 17:06:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NjQ4MDc5NSwiaWF0IjoxNjc2Mzk0Mzk1LCJqdGkiOiIxZmJjMWVkYzQ5ZDg0Y2JhYTJkZGU5MTI1YWEyN2I0ZCIsInVzZXJfaWQiOjJ9.3zesUlVbalFAgRGc9dyk_qw_4D_p_KDVor7uLf_ElPk\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mzk0Njk1LCJpYXQiOjE2NzYzOTQzOTUsImp0aSI6ImU5NWZlMDk2NTRmYjQ3YjlhNWVkYmRjODJhNWE4YjQ4IiwidXNlcl9pZCI6Mn0.qmelhZQz432geYbgoUvBtzyxnEZOC7cyqm2Bk0vEcr8\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		}
+	]
+}
