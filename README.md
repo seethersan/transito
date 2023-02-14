@@ -2,7 +2,7 @@
 
 This API was built with python3.10, Django 4.15 and Postgres 14.1
 
-# Asumptions
+## Asumptions
 
 1. For simplicity purposes, only Policia can login the webapp, overriding user with Policia class.
 2. The method `cargar_infraccion`is in the POST method of the endpoint: `/api/infraciones/`
@@ -12,9 +12,9 @@ This API was built with python3.10, Django 4.15 and Postgres 14.1
 6. In order to get the Bearer token is necessary to login with an existing user with the endpoint `api/token/`
 7. This project use the django admin to manage recods in the endpoint `admin/`
 
-# RUN PROJECT
+## RUN PROJECT
 
-## VirtualEnv
+### VirtualEnv
 
 Use a virtualenv to run the app
 
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-## Docker Compose
+### Docker Compose
 
 Use docker-compose to run the app
 
@@ -35,9 +35,9 @@ docker-compose up -d
 It will build the image and run it using docker-compose
 The app can be accessed using por 8000
 
-# Create admin user
+## Create admin user
 
-## Virtualenv
+### Virtualenv
 
 If you are running the project with virtualenv you need to execute the following command
 
@@ -45,7 +45,7 @@ If you are running the project with virtualenv you need to execute the following
 python manage.py createsuperuser
 ```
 
-## Docker Compose
+### Docker Compose
 
 First you need to open a shell inside the app's container
 
@@ -55,13 +55,23 @@ docker exec -it [CONTAINER-ID] /bin/bash
 python manage.py createsuperuser
 ```
 
-# Run tests
+## Run tests
 
 ```bash
 python manage.py test
 ```
 
-# Proposed AWS Arquitecture
+## API documentation
+
+The API documentation is in the endpoint `/swagger/`
+You can import the Postman collection to tests the API endpoints
+The token is saved as a collection variable each time you run the login request.
+
+## Docker Hub image
+
+The docker image can be found in this [link](https://hub.docker.com/repository/docker/seethersan/transito/general)
+
+## Proposed AWS Arquitecture
 
 1. Amazon ECR: It can be used to store the docker images of the app.
 2. Amazon ECS: With a ECS cluster we can host the Docker containers and configure it to work with the Django application and PostgreSQL database.
