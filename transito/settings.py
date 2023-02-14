@@ -26,9 +26,9 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", True) == "True"
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 
 # Application definition
@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'rest_framework',
-    'rest_framework_simplejwt',
+    "rest_framework",
+    "rest_framework_simplejwt",
     "persona",
     "policia",
     "vehiculo",
@@ -77,10 +77,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "transito.wsgi.application"
 
+AUTH_USER_MODEL = "policia.policia"
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-USE_POSTGRES = os.environ.get("USE_POSTGRES", False) == "True"
+USE_POSTGRES = os.environ.get("USE_POSTGRES", "False") == "True"
 POSTGRES_DATABASE_NAME = os.environ.get("POSTGRES_DATABASE_NAME", "db")
 POSTGRES_USERNAME = os.environ.get("POSTGRES_USERNAME", "postgres")
 POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", "postgres")
@@ -149,7 +151,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
 }

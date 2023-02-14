@@ -13,6 +13,9 @@ WORKDIR $DOCKERHOME
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 # install dependencies  
 RUN pip install --upgrade pip  
 

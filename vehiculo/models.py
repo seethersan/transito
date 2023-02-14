@@ -4,6 +4,7 @@ from django.db import models
 from persona.models import Persona
 from policia.models import Policia
 
+
 class Vehiculo(models.Model):
     placa = models.CharField(max_length=10, primary_key=True)
     marca = models.CharField(max_length=20, null=False, blank=False)
@@ -18,10 +19,13 @@ class Vehiculo(models.Model):
 
 class Infraccion(models.Model):
     vehiculo = models.ForeignKey(Vehiculo, on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(null=False, blank=False)
     lugar = models.CharField(max_length=50, null=False, blank=False)
     comentarios = models.CharField(max_length=200, null=False, blank=False)
     policia = models.ForeignKey(Policia, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ("vehiculo", "timestamp", "lugar", "comentarios")
 
     def __str__(self):
         return self.vehiculo.placa

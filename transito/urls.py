@@ -18,16 +18,25 @@ from django.urls import include, path
 from rest_framework_simplejwt import views as jwt_views
 from rest_framework.routers import DefaultRouter
 
+
 from vehiculo.api.views import VehiculoViewSet, InfraccionViewSet
+from persona.api.views import PersonaViewSet
+from policia.api.views import RegisterView
 
 
 router = DefaultRouter()
-router.register(r'vehiculos', VehiculoViewSet, basename='vehiculos')
-router.register(r'infracciones', InfraccionViewSet, basename='infracciones')
+router.register(r"personas", PersonaViewSet, basename="personas")
+router.register(r"vehiculos", VehiculoViewSet, basename="vehiculos")
+router.register(r"infracciones", InfraccionViewSet, basename="infracciones")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('api/', include(router.urls)),
-    path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    path("api/", include(router.urls)),
+    path("api/register/", RegisterView.as_view(), name="register"),
+    path(
+        "api/token/", jwt_views.TokenObtainPairView.as_view(), name="token_obtain_pair"
+    ),
+    path(
+        "api/token/refresh/", jwt_views.TokenRefreshView.as_view(), name="token_refresh"
+    ),
 ]
